@@ -1,0 +1,28 @@
+# metadata.toml
+
+# Shared metadata for «Sierra Arn — Composizioni, Op. 1».
+# Read by `composizioni/cover/lib.typ` and the `write-mp4-metadata` CLI.
+#
+# | Field                 | Consumer             | Output |
+# |-----------------------|----------------------|--------|
+# | author.display_name   | lib.typ              | Cover |
+# | author.display_name   | write-mp4-metadata   | release.mp4 `ARTIST` |
+# | work.collection       | lib.typ              | Cover |
+# | work.collection       | write-mp4-metadata   | release.mp4 `ALBUM` |
+# | date.year, month, day | lib.typ              | Cover |
+# | date.year, month, day | write-mp4-metadata   | release.mp4 `DATE` |
+# | license.notice        | write-mp4-metadata   | release.mp4 `COPYRIGHT` |
+
+[author]
+display_name = "Sierra Arn"
+
+[work]
+collection = "Composizioni, Op. 1"
+
+[date]
+year = 2026
+month = 9
+day = 15
+
+[license]
+notice = "Copyright (c) 2026 Ilya Snegov (aka Sierra Arn). Licensed under CC BY 4.0."

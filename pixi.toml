@@ -1,0 +1,106 @@
+# ==================================================================================================
+
+[workspace]
+authors = ["Sierra-Arn <unweariedheart@gmail.com>"]
+name = "video-forge-opus-one"
+version = "0.1.0"
+license = "Apache-2.0 AND CC-BY-4.0"
+repository = "https://github.com/Sierra-Arn/video-forge-opus-one"
+
+channels = ["https://prefix.dev/conda-forge"]
+platforms = ["linux-64"]
+preview = ["pixi-build"]
+requires-pixi = ">=0.80.0"
+
+# ==================================================================================================
+
+[dependencies]
+scripts = { path = "./recipes/scripts" }
+
+# ==================================================================================================
+
+[tasks]
+fetch-release-flacs = "fetch-release-flacs"
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-1 = "typst-compile Op-1_No-1_Believe"
+encode-mp4-no-1 = "encode-mp4 Op-1_No-1_Believe"
+release-no-1 = "write-mp4-metadata Op-1_No-1_Believe \"No. 1: Believe\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-2 = "typst-compile Op-1_No-2_Silence"
+encode-mp4-no-2 = "encode-mp4 Op-1_No-2_Silence"
+release-no-2 = "write-mp4-metadata Op-1_No-2_Silence \"No. 2: Silence\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-3 = "typst-compile Op-1_No-3_Abyss"
+encode-mp4-no-3 = "encode-mp4 Op-1_No-3_Abyss"
+release-no-3 = "write-mp4-metadata Op-1_No-3_Abyss \"No. 3: Abyss\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-4 = "typst-compile Op-1_No-4_Through_Pain"
+encode-mp4-no-4 = "encode-mp4 Op-1_No-4_Through_Pain"
+release-no-4 = "write-mp4-metadata Op-1_No-4_Through_Pain \"No. 4: Through Pain\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-5 = "typst-compile Op-1_No-5_To-the-Beloved"
+encode-mp4-no-5 = "encode-mp4 Op-1_No-5_To-the-Beloved"
+release-no-5 = "write-mp4-metadata Op-1_No-5_To-the-Beloved \"No. 5: To the Beloved\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-6 = "typst-compile Op-1_No-6_Dreaming"
+encode-mp4-no-6 = "encode-mp4 Op-1_No-6_Dreaming"
+release-no-6 = "write-mp4-metadata Op-1_No-6_Dreaming \"No. 6: Dreaming\""
+
+# --------------------------------------------------------------------------------------------------
+
+typst-compile-no-7 = "typst-compile Op-1_No-7_Solitude-and-Loneliness"
+encode-mp4-no-7 = "encode-mp4 Op-1_No-7_Solitude-and-Loneliness"
+release-no-7 = "write-mp4-metadata Op-1_No-7_Solitude-and-Loneliness \"No. 7: Solitude and Loneliness\""
+
+# --------------------------------------------------------------------------------------------------
+
+[tasks.typst-compile-all]
+depends-on = [
+    "typst-compile-no-1",
+    "typst-compile-no-2",
+    "typst-compile-no-3",
+    "typst-compile-no-4",
+    "typst-compile-no-5",
+    "typst-compile-no-6",
+    "typst-compile-no-7",
+]
+
+# --------------------------------------------------------------------------------------------------
+
+[tasks.encode-mp4-all]
+depends-on = [
+    "encode-mp4-no-1",
+    "encode-mp4-no-2",
+    "encode-mp4-no-3",
+    "encode-mp4-no-4",
+    "encode-mp4-no-5",
+    "encode-mp4-no-6",
+    "encode-mp4-no-7",
+]
+
+# --------------------------------------------------------------------------------------------------
+
+[tasks.release-all]
+depends-on = [
+    "release-no-1",
+    "release-no-2",
+    "release-no-3",
+    "release-no-4",
+    "release-no-5",
+    "release-no-6",
+    "release-no-7",
+]
+
+# ==================================================================================================
