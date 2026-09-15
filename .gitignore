@@ -1,13 +1,9 @@
-# VS Code
-.vscode/
-
 # pixi environments
 .pixi/*
 !.pixi/config.toml
 
 # python-generated files
 __pycache__/
-*.egg-info/
 
 # generated video artifacts
 *.mp4
