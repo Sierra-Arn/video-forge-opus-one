@@ -2,6 +2,9 @@
 
 *A Pixi workspace for building publication-ready video files of «Sierra Arn — Composizioni, Op. 1» from release FLAC audio.*
 
+> **Note:**  
+> If you only need the finished MP4 video and do not want to set up this workspace locally, download them from the [MP4 release](https://github.com/Sierra-Arn/video-forge-opus-one/releases/tag/v2026.09.15). The FLAC audio sources (`.flac`) live in [audio-forge-opus-one](https://github.com/Sierra-Arn/audio-forge-opus-one).
+
 ## Project Structure at a Glance
 
 ```
